@@ -1,0 +1,44 @@
+server:
+  port: 8070
+  error:
+    # No mostrar el stacktrace en la respuesta JSON
+    include-stacktrace: never
+    # No mostrar el mensaje de error por defecto (solo el tuyo)
+    include-message: always
+
+spring:
+  application:
+    name: app-login
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      # Controla ccmo se comporta la base de datos al iniciar
+      # 'update' aplica cambios, 'create' borra y crea todo de nuevo
+      ddl-auto: create-drop
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
+    # Muestra las consultas SQL en la consola
+    show-sql: true
+    properties:
+      hibernate:
+        # Formatea el SQL para que sea legible en lugar de una sola línea
+        format_sql: true
+        # Resalta las palabras clave del SQL con colores
+        highlight_sql: true
+  h2:
+    console:
+      enabled: false
+
+security:
+  jwt:
+    private:
+      key: ${PRIVATE_KEY}
+    user:
+      generator: ${USER_GENERATOR}
+
+logging:
+  level:
+    org.hibernate.tool.schema: DEBUG
