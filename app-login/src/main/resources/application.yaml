@@ -18,16 +18,11 @@ spring:
     hibernate:
       # Controla ccmo se comporta la base de datos al iniciar
       # 'update' aplica cambios, 'create' borra y crea todo de nuevo
-      ddl-auto: create-drop
+      ddl-auto: update
     #database-platform: org.hibernate.dialect.PostgreSQLDialect
     # Muestra las consultas SQL en la consola
-    show-sql: true
-    properties:
-      hibernate:
-        # Formatea el SQL para que sea legible en lugar de una sola línea
-        format_sql: true
-        # Resalta las palabras clave del SQL con colores
-        highlight_sql: true
+    show-sql: false
+
   h2:
     console:
       enabled: false
@@ -39,6 +34,3 @@ security:
     user:
       generator: ${USER_GENERATOR}
 
-logging:
-  level:
-    org.hibernate.tool.schema: DEBUG
