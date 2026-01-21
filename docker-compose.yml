@@ -5,8 +5,8 @@ services:
     ports:
       - "8070:8070"
     environment:
-      - ADMIN_USERNAME=admin
-      - ADMIN_PASSWORD=contraseña
+      - ADMIN_USERNAME=#admin_username
+      - ADMIN_PASSWORD=#admin_password
       - PRIVATE_KEY=b9e09af3c4942c8667f5cee3828d2c2d87ad56dc422d4f8afce3913ef77a5e4d
       - USER_GENERATOR=PROJECT
       - DB_URL=jdbc:postgresql://login_db:5432/login
@@ -22,8 +22,8 @@ services:
     ports:
       - "5431:5432"
     environment:
-      - POSTGRES_USER=pg
-      - POSTGRES_PASSWORD=contrasecontrase
+      - POSTGRES_USER=#user_postgres
+      - POSTGRES_PASSWORD=#password_postgres
       - POSTGRES_DB=login
     restart: always
     volumes:
