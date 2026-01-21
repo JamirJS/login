@@ -2,7 +2,7 @@
 
 # Login con JWT
 
-Este es un proyecto de inicio de sesión con JWT, desarrollado con roles y permisos, usando Spring Boot y Sp´ring Security.
+Este es un proyecto de inicio de sesión con JWT, desarrollado con roles y permisos, usando Spring Boot y Spring Security.
 
 ## 🛠️ Tecnologías Utilizadas
 
