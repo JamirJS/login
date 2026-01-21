@@ -1,5 +1,6 @@
 package com.project.controller;
 
+import com.project.controller.interfaces.IUserController;
 import com.project.dto.UserCreationDTO;
 import com.project.dto.UserDTO;
 import com.project.mapper.UserMapper;
@@ -17,7 +18,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/user")
 @PreAuthorize("denyAll()")
-public class UserController {
+public class UserController implements IUserController {
 
     private final IUserService userService;
     private final ResolverRoles resolverRoles;

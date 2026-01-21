@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@Tag(name = "Userios", description = "Operaciones relacionadas con la gestion de usuarios")
+@Tag(name = "Usuarios", description = "Operaciones relacionadas con la gestion de usuarios")
 public interface IUserController {
 
     @Operation(

@@ -77,24 +77,6 @@ public class DataInitializer implements CommandLineRunner {
                     permissionEntities.add(permission);
                 });
 
-        /*
-        this.roleRepository.findByRoleName(RoleEnum.ADMIN).ifPresentOrElse(
-                role -> {
-                    // Si el rol existe, actualizamos sus permisos por si agregaste nuevos
-                    role.setPermissionList(permissionEntities);
-                    roleRepository.save(role);
-                },
-                () -> {
-                    // Si el rol no existe, lo creamos
-                    RoleEntity newRole = RoleEntity.builder()
-                            .roleName(RoleEnum.ADMIN)
-                            .permissionList(permissionEntities)
-                            .build();
-                    roleRepository.save(newRole);
-                }
-        );*/
-
-
         if (this.roleRepository.findByRoleName(RoleEnum.ADMIN).isEmpty()) {
             RoleEntity role = new RoleEntity();
             role.setRoleName(RoleEnum.ADMIN);

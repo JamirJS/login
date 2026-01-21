@@ -73,7 +73,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         String accessToken = jwtUtils.createToken(authentication);
 
-        AuthResponseDTO authResponseDTO = new AuthResponseDTO(username, "Loggin Successfull", accessToken, true);
+        AuthResponseDTO authResponseDTO = new AuthResponseDTO(username, "Login Successfull", accessToken, true);
         return authResponseDTO;
     }
 
