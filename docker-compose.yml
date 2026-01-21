@@ -5,8 +5,8 @@ services:
     ports:
       - "8070:8070"
     environment:
-      - ADMIN_USERNAME=pri
-      - ADMIN_PASSWORD=contrase
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=contraseña
       - PRIVATE_KEY=b9e09af3c4942c8667f5cee3828d2c2d87ad56dc422d4f8afce3913ef77a5e4d
       - USER_GENERATOR=PROJECT
       - DB_URL=jdbc:postgresql://login_db:5432/login
