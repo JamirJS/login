@@ -10,8 +10,8 @@ services:
       - PRIVATE_KEY=b9e09af3c4942c8667f5cee3828d2c2d87ad56dc422d4f8afce3913ef77a5e4d
       - USER_GENERATOR=PROJECT
       - DB_URL=jdbc:postgresql://login_db:5432/login
-      - DB_USER=#user_postgres
-      - DB_PASSWORD=#password_postgres
+      - DB_USER=user_postgres
+      - DB_PASSWORD=password_postgres
     restart: always
     depends_on:
       login_db:
@@ -22,14 +22,14 @@ services:
     ports:
       - "5431:5432"
     environment:
-      - POSTGRES_USER=#user_postgres
-      - POSTGRES_PASSWORD=#password_postgres
+      - POSTGRES_USER=user_postgres
+      - POSTGRES_PASSWORD=password_postgres
       - POSTGRES_DB=login
     restart: always
     volumes:
       - postgres_login_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U pg -d login"]
+      test: ["CMD-SHELL", "pg_isready -U user_postgres -d login"]
       interval: 5s
       timeout: 10s
       retries: 2
