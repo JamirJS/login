@@ -30,7 +30,6 @@ Este es un proyecto de inicio de sesión con JWT, desarrollado con roles y permi
 > **Requisitos:**  
 > - Docker
 > - Configurar el `admin_username` y `admin_password` para el usuario con rol ADMIN en el archivo `docker-compose.yml`  
-> - Configurar el usuario y la contraseña de la base de datos en el archivo `docker-compose.yml`
 
 
 Clona el repositorio:
